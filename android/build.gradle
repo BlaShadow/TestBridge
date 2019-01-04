@@ -1,0 +1,42 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+    maven { url "https://maven.google.com" }
+}
+
+dependencies {
+    compile 'com.facebook.react:react-native:+'
+
+    compile 'com.android.volley:volley:1.1.1'
+    compile 'com.stanfy:gson-xml-java:0.1.+'
+}
+  
